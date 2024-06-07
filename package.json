@@ -1,7 +1,7 @@
 {
   "name": "colisao-canvas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Uma simples animação em canvas.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
