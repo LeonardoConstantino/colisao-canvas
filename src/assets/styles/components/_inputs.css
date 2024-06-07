@@ -1,0 +1,38 @@
+.label-config{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+}
+
+.label-config.row{
+	flex-direction: row;
+}
+
+.label-config input{
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.div-cores {
+	display: flex;
+	justify-content: space-between;
+}
+
+[data-cor] {
+	width: 70px;
+	height: 60px;
+	background-color: transparent;
+	border: none;
+}
+
+[data-cor]::-webkit-color-swatch {
+	border-radius: 15px;
+	border: none;
+}
+
+[data-cor]::-moz-color-swatch {
+	border-radius: 15px;
+	border: none;
+}

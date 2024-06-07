@@ -1,0 +1,5 @@
+canvas {
+	filter: blur(0.6px);
+	image-rendering:
+	 optimizeSpeed;
+}
