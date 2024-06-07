@@ -47,8 +47,8 @@ module.exports = {
 			filename: 'styles.css',
 		}),
 		new HtmlWebpackPlugin({
-            template: './src/main.html', // Usando seu arquivo HTML atual como template
-            filename: 'index.html', // Nome do arquivo de saída
+            template: './src/main.html', 
+            filename: 'index.html',
         }),
 		new CopyWebpackPlugin({
             patterns: [
