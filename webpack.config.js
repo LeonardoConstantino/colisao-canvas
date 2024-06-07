@@ -4,6 +4,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const OptimizePlugin = require('optimize-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
@@ -54,6 +55,7 @@ module.exports = {
                 { from: 'src/assets/images', to: 'images' },
             ],
         }),
+		// new OptimizePlugin(),
 		// new BundleAnalyzerPlugin(),
 	],
 	optimization: {
