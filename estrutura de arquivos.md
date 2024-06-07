@@ -53,8 +53,9 @@
 | |   ...                  # Outros utilitários
 | |
 | |– main.js               # Arquivo HTML principal
+| |
+| |– main.html              # Arquivo JS principal
 |
-|– index.html              # Arquivo JS principal
 ```
 
 ## Estrutura da pasta styles

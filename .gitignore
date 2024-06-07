@@ -8,15 +8,6 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 
-# Arquivos de build
-dist/
-build/
-*.bundle.js
-*.bundle.js.map
-
-# Arquivos Sass compilados
-/src/assets/styles/*.css
-
 # Outros arquivos
 .cache/
 .vscode/
