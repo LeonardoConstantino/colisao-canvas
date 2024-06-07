@@ -5,9 +5,9 @@ import {
 	btnRecomecarHandler,
 } from '../../services/handle.js'
 
-const playIcone = '../src/assets/images/play-pause.svg'
-const recomecaIcone = '../src/assets/images/replay.svg'
-const resetIcone = '../src/assets/images/reset-settings.svg'
+import playIcone from '../../assets/images/play-pause.svg'
+import recomecaIcone from '../../assets/images/replay.svg'
+import resetIcone from '../../assets/images/reset-settings.svg'
 
 const btnPause = createButtonIcone(
 	playIcone,

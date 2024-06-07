@@ -5,7 +5,7 @@ const fontUrl =
 
 let showLog = true
 
-const loadFont = async (ctx, maxAttempts = 10, interval = 500) => {
+const loadFont = async (maxAttempts = 10, interval = 500) => {
 	const fontFace = new FontFace('PressStart2P', `url(${fontUrl})`)
 	let attempts = 0
 
@@ -13,7 +13,7 @@ const loadFont = async (ctx, maxAttempts = 10, interval = 500) => {
 		try {
 			await fontFace.load()
 			document.fonts.add(fontFace)
-			ctx.font = '16px PressStart2P'
+			// ctx.font = '16px PressStart2P'
 			if (showLog) {
 				console.log('Fonte carregada com sucesso.')
 				showLog = false
@@ -29,7 +29,7 @@ const loadFont = async (ctx, maxAttempts = 10, interval = 500) => {
 			if (attempts < maxAttempts) {
 				setTimeout(tryLoadFont, interval)
 			} else {
-				ctx.font = 'bold 20px Monospace'
+				// ctx.font = 'bold 20px Monospace'
 				if (showLog) {
 					console.error(
 						'Não foi possível carregar a fonte após várias tentativas.'
@@ -42,6 +42,8 @@ const loadFont = async (ctx, maxAttempts = 10, interval = 500) => {
 
 	tryLoadFont()
 }
+
+loadFont()
 
 const drawRoundedRect = (ctx, x, y, width, height, radius, fillColor) => {
 	ctx.beginPath()
@@ -104,7 +106,6 @@ const drawTextWithBackground = (
 
 export const draw = async (canvas, physicsScene, sizeCanvas) => {
 	const ctx = canvas.getContext('2d')
-	await loadFont(ctx)
 	const { cScale, convertCoordinates } = sizeCanvas
 	// Limpa o canvas
 	ctx.fillStyle = colors.primary
@@ -112,7 +113,6 @@ export const draw = async (canvas, physicsScene, sizeCanvas) => {
 
 	// Função para criar gradiente radial
 	const createGradient = (x, y, radius, c1, c2) => {
-		// console.log(x, y, radius, c1, c2)
 		const gradient = ctx.createRadialGradient(
 			x,
 			y,
@@ -143,6 +143,7 @@ export const draw = async (canvas, physicsScene, sizeCanvas) => {
 	})
 
 	if (physicsScene.showFrameRate) {
+		ctx.font = '16px PressStart2P'
 		drawTextWithBackground(
 			ctx,
 			physicsScene.frameRate,

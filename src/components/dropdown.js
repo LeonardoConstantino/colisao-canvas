@@ -1,4 +1,5 @@
 // src/components/dropdown.js
+// const path = require('path')
 import { renderElement } from '../utils/renderElement.js'
 import { divBtn } from './dropdownItens/btns.js'
 import { checkbox } from './dropdownItens/showFrameRate.js'
@@ -11,7 +12,8 @@ import { sliderRaioBola } from './dropdownItens/sliderRaio.js'
 import { sliderNumBalls } from './dropdownItens/sliderNumBalls.js'
 import { colorpick } from './dropdownItens/changeColor.js'
 
-const iconeConfig = '../src/assets/images/icone-config.svg'
+import iconeConfig from '../assets/images/icone-config.svg';
+// import iconeConfig from path.resolve(__dirname, '../assets/images/icone-config.svg');
 
 const icone = {
 	type: 'i',
