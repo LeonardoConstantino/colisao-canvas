@@ -14,38 +14,22 @@ const span = {
 	},
 }
 
-const input1 = {
-	type: 'input',
-	props: {
-		type: 'color',
-		oninput: changeColorHandle,
-		'data-cor': 'primary',
-		value: rgbToHex3(colors.primary),
-		title: "Cor do fundo"
-	},
-}
+const createColorInput = (dataCor, value, title) => {
+    return {
+        type: 'input',
+        props: {
+            type: 'color',
+            oninput: changeColorHandle,
+            'data-cor': dataCor,
+            value: rgbToHex3(value),
+            title: title
+        }
+    };
+};
 
-const input2 = {
-	type: 'input',
-	props: {
-		type: 'color',
-		oninput: changeColorHandle,
-		'data-cor': 'secondary',
-		value: rgbToHex3(colors.secondary),
-		title: "Cor principal da bola"
-	},
-}
-
-const input3 = {
-	type: 'input',
-	props: {
-		type: 'color',
-		oninput: changeColorHandle,
-		'data-cor': 'accent',
-		value: rgbToHex3(colors.accent),
-		title: "Cor secundaria da bola"
-	},
-}
+const input1 = createColorInput('primary', colors.primary, 'Cor do fundo');
+const input2 = createColorInput('secondary', colors.secondary, 'Cor principal da bola');
+const input3 = createColorInput('accent', colors.accent, 'Cor secundaria da bola');
 
 const div = {
 	type: 'div',
