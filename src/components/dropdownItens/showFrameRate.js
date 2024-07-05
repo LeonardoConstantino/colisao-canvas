@@ -21,6 +21,10 @@ const input = {
 	},
 }
 
+/**
+ * Cria um checkbox para mostrar ou ocultar a taxa de quadros por segundo (fps).
+ * @returns {Object} Um elemento de checkbox para mostrar ou ocultar a taxa de quadros por segundo (fps).
+ */
 export const checkbox = {
 	type: 'label',
 	props: {
@@ -29,4 +33,3 @@ export const checkbox = {
 		title: "Se marcado mostra o fps."
 	},
 }
-// console.log('checkbox :', checkbox)

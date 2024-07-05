@@ -14,6 +14,13 @@ const span = {
 	},
 }
 
+/**
+ * Cria um elemento de input de cor com as configurações especificadas.
+ * @param {string} dataCor - O atributo de dados para identificar a cor, como 'primary', 'secondary' ou 'accent'.
+ * @param {string} value - O valor RGB da cor.
+ * @param {string} title - O título do input de cor, indicando o propósito da cor.
+ * @returns {ColorInputElement} As configurações para criar um elemento de input de cor.
+ */
 const createColorInput = (dataCor, value, title) => {
     return {
         type: 'input',
